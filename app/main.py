@@ -17,7 +17,8 @@ def run():
             country = result[0]
             labels, values = utils.get_population(country)
             print(labels, values)
-            charts.show_chart(labels, values, tipo='bar')
+            charts.generate_bar_chart(labels, values )
+            charts.generate_pie_chart(labels, values)
     elif que_ver == 'poblaion_mundial':
         labels, values = utils.country_percentage(data)
         charts.show_chart(labels, values, tipo='pie')

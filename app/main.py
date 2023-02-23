@@ -5,23 +5,24 @@ import charts
 
 
 def run():
+    namecountry = 'pblacion mundial'
     data = read_csv.read_csv('data.csv')
     
-    que_ver = input('quieres ver la poblaion_mundial o un_pais ')
+    que_ver = input('quieres ver la poblacion_mundial o un_pais ')
     if que_ver == 'un_pais':
-        country = input('type country =>')
+        namecountry = input('type country =>')
  
-        result = utils.population_by_country(data, country)
+        result = utils.population_by_country(data, namecountry)
 
         if len(result) > 0:
             country = result[0]
             labels, values = utils.get_population(country)
             print(labels, values)
-            charts.generate_bar_chart(labels, values )
-            charts.generate_pie_chart(labels, values)
-    elif que_ver == 'poblaion_mundial':
+            charts.generate_bar_chart(namecountry, labels, values)
+            charts.generate_pie_chart(namecountry, labels, values)
+    elif que_ver == 'poblacion_mundial':
         labels, values = utils.country_percentage(data)
-        charts.show_chart(labels, values, tipo='pie')
+        charts.generate_pie_chart(labels, values, namecountry)
 
 
 

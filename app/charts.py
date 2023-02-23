@@ -1,17 +1,17 @@
 import matplotlib.pyplot as plt
 
-def generate_bar_chart(labels, values ):
+def generate_bar_chart(labels, values, name):
 
     fig, ax = plt.subplots()
     ax.bar(labels, values)
-    plt.savefig('./imagenes/bar.png')
+    plt.savefig(f'./imagenes/{name}_bar.png')
     plt.close()
-def generate_pie_chart(labels, values):
+def generate_pie_chart(labels, values, name):
 
     fig, ax = plt.subplots()
     ax.pie(values, labels=labels)
     ax.axis('equal')
-    plt.savefig('./imagenes/pie.png')
+    plt.savefig(f'./imagenes/{name}_pie.png')
     plt.close()
     
 

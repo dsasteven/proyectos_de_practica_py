@@ -13,9 +13,6 @@ def generate_pie_chart(labels, values ):
     ax.axis('equal')
     plt.show()
     
-    
-
-
 
 if __name__ == "__main__":
 

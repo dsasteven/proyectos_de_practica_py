@@ -13,6 +13,7 @@ python3 piedra_papel_o_tijeras.py
 ```sh
 git clone
 cd app
+pip2 -m venv ven
 python3 -m venv env
 source env/bin/activate
 pip3 install -r requirements.txt
